@@ -1,0 +1,38 @@
+apiVersion: apps/v1
+kind: StatefulSet
+metadata:
+  name: magiccap-upload-proxy
+spec:
+  replicas: 2
+  serviceName: magiccap-upload-proxy
+  selector:
+    matchLabels:
+      run: magiccap-upload-proxy
+  template:
+    metadata:
+      labels:
+        run: magiccap-upload-proxy
+    spec:
+      containers:
+      - name: magiccap-upload-proxy
+        image: jakemakesstuff/magiccap-upload-proxy
+        imagePullPolicy: "Always"
+        ports:
+        - containerPort: 8080
+        readinessProbe:
+          httpGet:
+            port: 8080
+            path: /
+          initialDelaySeconds: 3
+          periodSeconds: 3
+        livenessProbe:
+          httpGet:
+            port: 8080
+            path: /
+          initialDelaySeconds: 10
+          periodSeconds: 10
+        # env:
+        # - name: MAGICCAP_USERNAME
+        #   value: USERNAME_OR_SECRET_HERE
+        # - name: MAGICCAP_PASSWORD
+        #   value: PASSWORD_OR_SECRET_HERE

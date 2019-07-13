@@ -1,0 +1,47 @@
+{
+  "name": "magiccap-upload-proxy",
+  "version": "1.0.0",
+  "description": "The upload proxy for MagicCap.",
+  "main": "./dist/index.js",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/MagicCap/upload-proxy.git"
+  },
+  "scripts": {
+    "postinstall": "tsc"
+  },
+  "keywords": [
+    "upload",
+    "MagicCap"
+  ],
+  "author": "Jake Gealer",
+  "license": "MPL-2.0",
+  "bugs": {
+    "url": "https://github.com/MagicCap/upload-proxy/issues"
+  },
+  "homepage": "https://github.com/MagicCap/upload-proxy#readme",
+  "devDependencies": {
+    "typescript": "^3.5.3",
+    "@types/node": "^12.6.2",
+    "@types/ssh2-sftp-client": "2.5.1",
+    "@types/mime-types": "2.1.0",
+    "@types/express": "4.17.0",
+    "@types/promise-ftp": "1.3.2",
+    "@types/node-fetch": "2.3.7"
+  },
+  "dependencies": {
+    "chainfetch": "^1.2.2",
+    "electron": "file:./electron-functionality",
+    "express": "^4.17.1",
+    "express-fileupload": "^1.1.5",
+    "fs-nextra": "^0.4.5",
+    "googleapis": "40.0.0",
+    "mime-types": "^2.1.24",
+    "node-fetch": "2.6.0",
+    "promise-ftp": "^1.3.5",
+    "safe-eval": "^0.4.1",
+    "ssh2-sftp-client": "^2.5.0",
+    "streamifier": "^0.1.1",
+    "tiny-s3-uploader": "^1.0.0"
+  }
+}
