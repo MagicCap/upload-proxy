@@ -33,7 +33,7 @@
     "chainfetch": "^1.2.2",
     "electron": "file:./electron-functionality",
     "express": "^4.17.1",
-    "express-fileupload": "^1.1.5",
+    "express-fileupload": "^1.1.9",
     "fs-nextra": "^0.4.5",
     "googleapis": "40.0.0",
     "mime-types": "^2.1.24",
